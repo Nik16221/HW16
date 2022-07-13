@@ -96,14 +96,14 @@ def init_db():
     db.drop_all()
     db.create_all()
 
-    with open("data/users.json") as file:
+    with open("data/users.json", encoding="utf-8") as file:
         data = json.load(file)
         insert_data_users(data)
 
-    with open("data/offers.json") as file:
+    with open("data/offers.json", encoding="utf-8") as file:
         data = json.load(file)
         insert_data_offers(data)
 
-    with open("data/orders.json") as file:
+    with open("data/orders.json", encoding="utf-8") as file:
         data = json.load(file)
         insert_data_orders(data)
